@@ -209,14 +209,17 @@ export function NotchNavbar({
                         <div className="text-[10px] tracking-[0.15em] uppercase text-gray-400 font-sans font-medium mb-3 pb-2 border-b border-black/5">
                           Atlas Business Group Entities
                         </div>
-                        <div className="grid grid-cols-1 gap-1 max-h-[380px] overflow-y-auto">
+                        <div 
+                          className="grid grid-cols-1 gap-1 max-h-[380px] overflow-y-auto overscroll-contain"
+                          data-lenis-prevent="true"
+                        >
                           {atlasGroups.map((group) => (
                             <a
                               key={group.name}
                               href={group.url}
                               target="_blank"
                               rel="noreferrer"
-                              className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                              className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors group/item shrink-0"
                             >
                               <img src={group.img} alt={group.name} className="w-8 h-8 object-contain rounded" />
                               <span className="text-[12px] font-bold text-gray-900 font-sans leading-snug group-hover/item:text-primary transition-colors">

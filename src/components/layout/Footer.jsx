@@ -45,17 +45,17 @@ export function Footer() {
       {/* SVG Graphics overlapping text */}
       <motion.div 
         style={{ y: svgY }}
-        className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center opacity-30"
+        className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center opacity-30 overflow-hidden"
       >
-        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="0.2" className="text-white" />
-          <path d="M0,60 Q25,30 50,60 T100,60" fill="none" stroke="currentColor" strokeWidth="0.1" className="text-white" />
-          <path d="M0,70 Q25,40 50,70 T100,70" fill="none" stroke="currentColor" strokeWidth="0.05" className="text-white" />
+        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <path d="M-20,50 Q25,10 50,50 T120,50" fill="none" stroke="currentColor" strokeWidth="0.2" className="text-white" />
+          <path d="M-20,60 Q25,20 50,60 T120,60" fill="none" stroke="currentColor" strokeWidth="0.1" className="text-white" />
+          <path d="M-20,70 Q25,30 50,70 T120,70" fill="none" stroke="currentColor" strokeWidth="0.05" className="text-white" />
         </svg>
       </motion.div>
 
       {/* Giant Slide-up Text */}
-      <div className="relative z-0 w-full flex justify-center items-end flex-grow pb-8 min-h-[30vh] overflow-hidden">
+      <div className="relative z-0 w-full flex justify-center items-end flex-grow pb-8 md:min-h-[30vh] overflow-hidden mt-8 md:mt-0">
         <motion.div 
           style={{ y: textY, opacity }}
           className="w-full flex justify-center h-full items-end"
